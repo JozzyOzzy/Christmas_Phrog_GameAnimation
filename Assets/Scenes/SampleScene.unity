@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -627,6 +627,14 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: -3988281293721181515, guid: 2b29f06b9f7ec45449b09e72a63c1b47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.794856
+      objectReference: {fileID: 0}
+    - target: {fileID: -3988281293721181515, guid: 2b29f06b9f7ec45449b09e72a63c1b47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000009382347
+      objectReference: {fileID: 0}
+    - target: {fileID: -3988281293721181515, guid: 2b29f06b9f7ec45449b09e72a63c1b47, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.5676307
       objectReference: {fileID: 0}
@@ -1152,6 +1160,48 @@ CapsuleCollider2D:
   m_Offset: {x: 0.21009123, y: 2.0561562}
   m_Size: {x: 1.6353867, y: 4.0634327}
   m_Direction: 0
+--- !u!50 &774080558
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774080553}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &774080559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774080553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82012b2267a77b4b8329e3a092836ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheckPoint: {fileID: 1835434775}
+  groundCheckDistance: 0.1
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 32
+  walkSpeed: 1
+  runSpeed: 3
+  speed: 1
+  jumpForce: 5
 --- !u!4 &831131922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7709093158678936965, guid: 2b29f06b9f7ec45449b09e72a63c1b47, type: 3}
@@ -1750,7 +1800,7 @@ GameObject:
   - component: {fileID: 1835434774}
   - component: {fileID: 1835434773}
   - component: {fileID: 1835434772}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1827,8 +1877,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835434771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2804, y: -2.41, z: 0.03}
-  m_LocalScale: {x: 17.044836, y: 0.42215896, z: 1}
+  m_LocalPosition: {x: -1.2245, y: -2.41, z: 0.03}
+  m_LocalScale: {x: 36.51491, y: 0.42215896, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
