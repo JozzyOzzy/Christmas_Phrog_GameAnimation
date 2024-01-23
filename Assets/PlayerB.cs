@@ -56,13 +56,15 @@ void Update()
 
     // Input Movement
     moveDirection = Input.GetAxis("Horizontal");
-    if (moveDirection != 0)
+    if (moveDirection != 0 && isGrounded) 
     {
         isMoving = true;
+        myAnimator.SetBool("Move",isMoving);  
     }
     else
     {
         isMoving = false;
+        myAnimator.SetBool("Move",isMoving);
     }
 
     
@@ -71,10 +73,12 @@ void Update()
     if (Input.GetKey(KeyCode.LeftShift))
     {
         isRunning = true;
+        myAnimator.SetBool("Run",isRunning); 
     }
     else
     {
         isRunning = false;
+        myAnimator.SetBool("Run",isRunning);
     }
 
     
@@ -103,13 +107,13 @@ private void FixedUpdate()
         myRigidbody.MovePosition(gameObject.transform.position + new Vector3(moveDirection * speed * maxSpeed  * Time.deltaTime,0,0));
     }
 
-    if (landing)
+    /*if (landing)
     {
         if (isGrounded)
         {
             myAnimator.SetTrigger("Land");                                          // Triggers Animation for "Land" > Change the name to match yours
         }
-    }
+    }*/
 
 
 
@@ -153,7 +157,7 @@ private void GrounCheck()
     isGrounded =
         Physics2D.Raycast(new Vector2(groundCheckPoint.transform.position.x, groundCheckPoint.transform.position.y),
             Vector2.down, groundCheckDistance, GroundLayer);
-    myAnimator.SetBool("Grounded",isGrounded);                                            // Boolean Animation for the "Grounded" > Change the name to match yours
+    myAnimator.SetBool("Ground",isGrounded);                                            // Boolean Animation for the "Grounded" > Change the name to match yours
 
 }
 
